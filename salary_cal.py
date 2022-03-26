@@ -8,3 +8,13 @@ salary = input ('Enter Salary: \n')
 houri = int(hour)
 salaryi = int(salary)
 
+if houri > 40:
+    print(name,'Worked Overtime!')
+    netsalary = salaryi * houri
+    ot = (houri - 40) * (salaryi * 1.5)
+    fullsalary = netsalary + ot
+else:
+    print(name, "worked Regulartime!")
+    fullsalary = salaryi * houri
+
+print('Total Salary is', fullsalary)
