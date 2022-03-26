@@ -5,8 +5,14 @@ name = input('Enter Name: \n')
 hour = input('Enter Hours: \n')
 salary = input ('Enter Salary: \n')
 
-houri = int(hour)
-salaryi = int(salary)
+try:
+    houri = int(hour)
+    salaryi = int(salary)
+
+except:
+    print('Hi', name, 'Your entered value is wrong')
+    print('&&&&please enter a numeric valuve&&&&')
+
 
 if houri > 40:
     print(name,'Worked Overtime!')
@@ -17,4 +23,7 @@ else:
     print(name, "worked Regulartime!")
     fullsalary = salaryi * houri
 
-print('Total Salary is', fullsalary)
+
+#Adding the market currency value
+rs = 'USD'
+print('Total Salary is', fullsalary,rs)
