@@ -1,27 +1,29 @@
 print("""***Hi, Welcome!***
         ***The program starts***""")
 
-name = input('Enter Name: \n')
-hour = input('Enter Hours: \n')
-salary = input ('Enter Salary: \n')
+def cal(rate, time):
+    print('Your worked salary and hours are:', rate , time)
 
+name = input('Enter Name: \n')
 try:
-    houri = int(hour)
-    salaryi = int(salary)
+    hour = int(input('Enter Hours: \n'))
+    salary = int(input('Enter Salary: \n'))
 
 except:
     print('Hi', name, 'Your entered value is wrong')
-    print('&&&&please enter a numeric valuve&&&&')
+    print('&&&& please enter a numeric value &&&&')
 
+cal(salary, hour)
 
-if houri > 40:
+if hour > 40:
     print(name,'Worked Overtime!')
-    netsalary = salaryi * houri
-    ot = (houri - 40) * (salaryi * 1.5)
+    netsalary = salary * hour
+    ot = (hour - 40) * (salary * 1.5)
     fullsalary = netsalary + ot
 else:
     print(name, "worked Regulartime!")
-    fullsalary = salaryi * houri
+    fullsalary = salary * hour
+
 
 
 #Adding the market currency value
